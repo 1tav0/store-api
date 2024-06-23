@@ -1,0 +1,47 @@
+How to start express app: 
+1. create server folder 
+2. npm init -y
+3. touch app.js 
+4. npm install express, dotenv, mongoose 
+
+create directory structure for your project: 
+5. touch controllers, db, errors, middleware, models, routes 
+set up dev dependencies and how to run as dev 
+6. npm install nodemon --save-dev or npm i -D nodemon
+
+{
+  "name": "my-express-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
+
+NOTE: To use import instead or required need this change 
+
+{
+  "name": "my-express-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.mjs",
+  "scripts": {
+    "start": "node ./src/app.mjs",
+    "dev": "nodemon ./src/app.mjs"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "type": "module"
+}
