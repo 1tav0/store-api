@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 
 const connectDB = require('./db/connect')
-// const productsRouter = require('./routes/products');
+const productsRouter = require('./routes/product');
 
 const notFound = require('./middleware/not-found');
 const errorHandler = require('./middleware/error-handler');
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 })
 
 //my base route
-// app.use('/api/v1/products', productsRouter);
+app.use('/api/v1/products', productsRouter);
 
 //products route
 app.use(notFound);
